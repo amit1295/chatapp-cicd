@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatapp
+  labels:
+    app: chatapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatapp
+  template:
+    metadata:
+      labels:
+        app: chatapp
+    spec:
+      containers:
+        - name: chatapp
+          image: 292029882946.dkr.ecr.us-east-1.amazonaws.com/chatapp:16f0c167597f4d03ee994ec82130e53f980f013a/chatapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
