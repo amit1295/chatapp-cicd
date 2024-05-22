@@ -42,6 +42,11 @@ jobs:
         version: 2                         # default
         verbose: false                     # default
         arch: amd64                        # allowed values: amd64, arm64
+
+    - name: aws test 
+      run: | 
+        aws version
+        aws s3 ls
         
     - name: Update kube config
       run: |
