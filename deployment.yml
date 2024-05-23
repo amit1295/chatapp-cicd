@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: chatapp
-          image: 292029882946.dkr.ecr.us-east-1.amazonaws.com/chatapp:1.11
+          image: 292029882946.dkr.ecr.us-east-1.amazonaws.com/chatapp:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
