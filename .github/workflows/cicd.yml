@@ -45,6 +45,6 @@ jobs:
         
     - name: Update kube config
       run: |
-        aws eks update-kubeconfig --name cicd-chatapp --region us-east-1
+        aws eks update-kubeconfig --name chatapp-cicd --region us-east-1
         kubectl get nodes
         # kubectl apply -f deployment.yml
