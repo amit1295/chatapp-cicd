@@ -43,10 +43,9 @@ jobs:
         verbose: false                     # default
         arch: amd64                        # allowed values: amd64, arm64
 
-    - name: aws test 
+    - name: aws create eks cluster 
       run: | 
-        aws s3 ls
-        aws eks list-clusters
+        eksctl create cluster --name cicd-chatapp --region us-east-1 --nodegroup-name chatapp-workers --node-type t3.micro --nodes 2
       # env: 
       #   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       #   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
