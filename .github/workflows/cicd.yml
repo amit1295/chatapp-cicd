@@ -43,6 +43,11 @@ jobs:
         verbose: false                     # default
         arch: amd64                        # allowed values: amd64, arm64
 
+    - name: aws install eksctl 
+      run: | 
+       curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp && sudo mv /tmp/eksctl /usr/local/bin
+
+        
     - name: aws create eks cluster 
       run: | 
         eksctl create cluster --name cicd-chatapp --region us-east-1 --nodegroup-name chatapp-workers --node-type t3.micro --nodes 2
