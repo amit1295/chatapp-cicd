@@ -48,3 +48,8 @@ jobs:
         aws eks update-kubeconfig --name chatapp-cicd --region us-east-1
         kubectl apply -f deployment.yml
         kubectl apply -f service.yml
+        kubectl scale deployment chatapp --replicas 0
+        sleep 5
+        kubectl scale deployment chatapp --replicas 1
+
+
