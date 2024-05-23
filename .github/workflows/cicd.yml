@@ -47,3 +47,4 @@ jobs:
       run: |
         aws eks update-kubeconfig --name chatapp-cicd --region us-east-1
         kubectl apply -f deployment.yml
+        kubectl apply -f service.yml
