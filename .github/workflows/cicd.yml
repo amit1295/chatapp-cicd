@@ -43,7 +43,7 @@ jobs:
         verbose: false                     # default
         arch: amd64                        # allowed values: amd64, arm64
         
-    - name: Update kube config + deploy app and svc
+    - name: Update kube config + deploy app with updated image and svc
       run: |
         aws eks update-kubeconfig --name chatapp-cicd --region us-east-1
         kubectl apply -f deployment.yml
