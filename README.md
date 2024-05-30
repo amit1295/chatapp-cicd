@@ -1,4 +1,4 @@
-# ChatApp Deployment to Amazon EKS
+# ChatApp Deployment to Amazon EKS 
 
 This GitHub Actions workflow automates the deployment of the ChatApp application to an Amazon EKS (Elastic Kubernetes Service) cluster. The ChatApp is a simple chat web application built with Flask, allowing users to communicate in real-time.
 
@@ -39,7 +39,7 @@ The deployment includes:
 
 To use this workflow:
 
-1. Ensure that your AWS credentials (access key ID and secret access key) are stored securely in GitHub Secrets.
+1. Ensure that your AWS credentials (access key ID and secret access key)  are stored securely in GitHub Secrets.
 
 2. Update the deployment YAML (`deployment.yml`) and service YAML (`service.yml`) files with your specific configuration and settings.
 
